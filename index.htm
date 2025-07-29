@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&family=Fredericka+the+Great&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+    
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        html{
+            font-size: 16px;
+        }
+            
+
+        @media (max-width: 1000px) {
+            html{
+                font-size: 10px;
+            }
+
+            .weServe{
+                padding: 1rem; 
+            }
+        }
+
+       .callNow{
+            position: fixed;
+            right: 40px;
+            top: 30px;
+            z-index: 100;
+           
+        }
+
+        .callNow button{
+        background: radial-gradient(circle at 30% 30%, #fff 70%, #e0e0e0 100%);
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        border: 3px solid #cac8c8;
+        box-shadow:
+        0 6px 20px 0 rgba(0,0,0,0.25),
+        0 2px 4px 0 rgba(0,0,0,0.18),
+        inset 0 2px 8px 0 #fff,
+        inset 0 -4px 12px 0 #bdbdbd;
+        }
+
+        .callNow button > div{
+            color: #cac8c8;
+            text-align: center;
+            font-size: 20px;
+           font-family: "Fredericka the Great", serif;
+        }
+        
+        .callNow button:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        h1{
+            font-size: 3.75rem; /* 60px -> 3.75rem */
+        }
+
+
+        p{
+            font-family: "Cormorant", serif;
+            font-size: 2.5rem; /* 40px -> 2.5rem */
+            font-weight: 700;
+        }
+    
+        body{
+            /* background-color: #2f3e46 */
+        } 
+
+        .logoCon{
+            background-image: url(./240_F_320343159_DiMoa3cJB2UIpvHA7IomP6hhARJWESRI.jpg);
+            background-size: cover;
+            height: 150vh;
+            
+        }
+
+        .logo{
+            background-color: rgba(201, 199, 199, 0.2);
+            backdrop-filter: blur(5px);
+            height: 100%;
+            position: relative;
+            
+        }
+
+        .logo img{
+            position: absolute;
+            top: 35%;
+            left: 5%;
+            transform: translate(5%, -50%);
+            width: 25%;
+            border-radius: 50%;
+            animation: fadeIn 5s, goLeft 5s;
+        }
+
+        .description{
+            position: absolute;
+            top: 30%;
+            left: 43%;
+            transform: translate(0%, -50%);
+            color: black;
+            text-shadow: 0 0.19em 0.31em #adaea9; /* 0 3px 5px */
+            font-family: "DM Serif Display", serif;
+            text-align: center;
+            animation: fadeIn 6s;
+        }
+
+        .description button{
+            margin-top: 6.0rem;    /* 120px -> 7.5rem */
+            margin-bottom: 7.0rem; /* 60px -> 3.75rem */
+            background-color: rgb(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            border: none;
+            box-shadow: 0.5em 0.5em 1.5em #adaea9, inset 0 0.13em 1em #adaea9, inset 0 -0.25em 1em #adaea9;
+            border-radius: 2.5em; /* 40px -> 2.5em */
+            width: 12.5rem; /* 200px -> 12.5rem */
+            height: 4.375rem; /* 70px -> 4.375rem */
+            font-size: 1.25rem; /* 20px -> 1.25rem */
+            font-family: "DM Serif Display", serif;
+        }
+
+        .description p{
+            margin-top: 100px;
+        }
+
+        .description button:hover{
+            cursor: pointer;
+            background-color: rgb(255, 255, 255, 10);
+            scale: 1.1;
+            transition: 0.4s;
+            
+        }
+
+        .description a{
+            text-decoration: none;
+        }
+
+       .weServe{
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 0.5em; /* 8px -> 0.5em */
+            font-size: 1.25rem; /* 20px -> 1.25rem */
+            padding: 3.0rem; /* 50px -> 3.125rem */
+        }
+
+        .afterLogo{
+            width: 100%;
+            position: absolute;
+            bottom: 9.375rem; /* 150px -> 9.375rem */
+            left: 50%;
+            transform: translate(-50%, 0px);
+            color: black;
+            text-shadow:
+                0.01em 0.01em 0 #bdbdbd,
+                0.45em 0.25em 4px #9e9e9e;
+            font-family: "DM Serif Display", serif;
+            text-align: center;
+            font-size: 3.125rem; /* 50px -> 3.125rem */
+            animation: fadeIn 6s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes goLeft {
+            0% {
+                top: 35%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            100% {
+                top: 35%;
+                left: 5%;
+                transform: translate(5%, -50%);
+            }
+        }
+
+        .two{
+            height: 110vh;
+            padding: 1.875rem; /* 30px -> 1.875rem */
+            background: linear-gradient(to bottom, white 0%, rgba(240, 223, 223, 0.7) 50%, white 100%);
+        }
+
+        .underOur{
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 0.5em; /* 8px -> 0.5em */
+            font-size: 4.125rem; /* 50px -> 3.125rem */
+            padding: 3.875rem; /* 30px -> 1.875rem */
+            font-family: "Playfair Display", serif;
+            font-weight: 700;
+            text-shadow: 0 0.19em 0.31em #adaea9;
+        }
+
+        .two p{
+            text-align: center;
+            padding: 30px;
+            align-self: center;
+            font-size: 3rem;
+            line-height: 5rem;
+            text-shadow: 0 0.19em 0.31em #adaea9;
+        }
+
+        .three{
+            height: 100vh;
+            width: 100%;
+                   }
+
+        .three .images{
+
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .three .images .img{
+            max-width: 25%;
+            
+        }
+
+
+        .three .images  img{
+            height: 290px;
+            
+        }
+
+        .four{
+          display: grid;
+          grid-template-columns: 1fr;
+           height: 100vh;
+          
+           background: linear-gradient(to bottom, white 0%, rgba(178, 174, 174, 0.7) 50%, white 100%);
+            
+            text-align: center;
+              font-family: "Playfair Display", serif;
+            font-weight: 700;
+            text-shadow: 0 0.19em 0.31em #adaea9;
+        }
+
+
+
+        .all{
+            padding-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+             
+        }
+
+        .right{
+            display: grid;
+            grid-template-columns: 1fr;
+            text-align:center;
+            padding-left: 40px;
+            
+        }
+
+        .left{
+            display: grid;
+            grid-template-columns: 1fr;
+            
+        }
+
+        .right > div{
+            padding-bottom: 30px;
+            align-self: end;
+        }
+
+        .four span{
+            padding: 5px;
+            padding-left: 15px;
+            cursor: pointer;
+        }
+
+        .four h2{
+         font-family: "Fredericka the Great", serif;
+        text-shadow: 0 0.19em 0.31em #adaea9;
+         font-size: 45px;
+        }
+
+        .four p{
+         font-family: "Titillium Web", sans-serif;
+         text-shadow: 0 0.19em 0.31em #adaea9;
+         font-size: 25px;
+         display: flex;
+         align-items: center;
+         /* justify-content: center; */
+
+        }
+
+        .four a{
+            text-decoration: none;
+            color: black;
+            font-family: "Titillium Web", sans-serif;
+            text-shadow: 0 0.19em 0.31em #adaea9;
+            font-size: 23px;
+        }
+
+        .lic{
+            align-self: end;
+            padding: 30px;
+        }
+
+        .lic h1{
+            font-size: 45px;
+        }
+
+        .five{
+            background: linear-gradient(to bottom, white 0%, rgba(255,255,255,0.7) 100%), 
+            url(./240_F_320343159_DiMoa3cJB2UIpvHA7IomP6hhARJWESRI.jpg);
+            background-size: cover;
+            margin-top: 200px;
+            height: 180vh;
+            /* background-color: white; */
+           
+        }
+
+        .five > div{
+          padding-top: 100px;
+          height: 100%;
+        }
+
+        .five h2{
+            font-family: 'DM Serif Display', serif;
+            text-shadow: 0 0.19em 0.31em #adaea9;
+            font-size: 45px;
+            text-align: center;
+        }
+
+        .five p{
+            padding: 20px;
+            font-family: "Cormorant", serif;
+           justify-self: center;
+            width: 85%;
+            line-height: 45px;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .footer{
+            margin-top: 200px;
+            text-align: center;
+            display: grid ;
+            grid-template-columns: 1fr 1fr 1fr;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        .footer .m{
+           align-self: center;
+        }
+
+        .footer .r img{
+            margin-top: 20px;
+             width: 30%;
+            border-radius: 50%;
+        }
+
+        .footer .l{
+            margin-top: 30px;
+            justify-items: start;
+            align-items: end;
+            line-height: 0px;
+        }
+
+        .footer .l p{
+            color: #386dbd;
+            font-size: 14px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+         .footer .l img{
+             width: 70%;
+             align-self: end;
+        }
+
+        .footer a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="callNow">
+       <a href="tel:+1 (929) 210-3781"> <button>
+        <svg class="phone" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#bdbdbd"><path d="M760-480q0-117-81.5-198.5T480-760v-80q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480h-80Zm-160 0q0-50-35-85t-85-35v-80q83 0 141.5 58.5T680-480h-80Zm198 360q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
+        <div style="display: none;">
+            Call <br> Now!
+        </div>
+    </button></a>
+    </div>
+    <div class="logoCon">
+        <div class="logo">
+            <img src="./image.png" alt="">
+
+            <div class="description">
+                <div class="weServe">
+                <!-- SVG geotag icon -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="#d32f2f" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                 </svg>
+                <span>Serving NYC,&nbsp; Long Island,&nbsp; Orange & Sullivan Counties</span>
+            </div>
+                <h1>PRESTIGE INSPECTIONS</h1>
+                <h2>Your Trusted New York Home Inspector</h2>
+                <!-- <a href="tel:+1 (929) 210-3781"><button>Call Us Now!</button></a> -->
+                <p>• Licensed &emsp; • Insured &emsp; • Certified</p>
+            </div>
+
+            <div class="afterLogo">
+            "Professional, Reliable, and Thorough - Every Time"
+            </div>
+        </div>
+    </div>
+    <div class="two">
+        <div class="underOur">
+            <span>YOUR HOME UNDER OUR</span>
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- License: Apache. Made by googlefonts: https://github.com/googlefonts/noto-emoji -->
+            <svg width="80px" height="80px" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet"><path d="M80.37 12.67c-19.85 0-34.8 14.95-34.8 34.8s16.15 36.01 36.01 36.01s34.8-14.95 34.8-34.8s-16.16-36.01-36.01-36.01" opacity=".6" fill="#81d4fa"></path><path d="M80.37 12.67c19.85 0 36.01 16.15 36.01 36.01s-14.95 34.8-34.8 34.8s-36.02-16.15-36.02-36.01s14.95-34.8 34.81-34.8m-27.62 7.18c-12.98 14.29-19.6 37.66-1.17 56.09c19.9 19.9 46.51 11.64 60.73-2.88c7.69-7.85 17.35-36.61-2.33-56.28s-48.61-6.42-57.23 3.07z" fill="#616161"></path><path d="M28.22 90.86l8.33 8.38l19.62-19.8s1.66-3.19-1.62-6.47c-3.28-3.28-6.71-1.91-6.71-1.91l-19.62 19.8z" fill="#bdbdbd"></path><path d="M39.5 76.96c1.13-.9 5.05-3 9.36 1.28c4.3 4.28 2.55 7.66 1.7 8.91c0 0-30.53 33.87-31.92 35.27c-2.05 2.05-6.26.3-10.16-3.6c-3.9-3.9-5.78-7.67-3.58-9.87c1.79-1.79 33.47-31.09 34.6-31.99z" fill="#616161"></path><path d="M84.08 8.64c19.85 0 36 16.15 36 36s-16.15 36-36 36s-36-16.15-36-36s16.16-36 36-36m0-3.96c-22.06 0-39.95 17.89-39.95 39.95s17.89 39.95 39.95 39.95s39.95-17.89 39.95-39.95S106.15 4.68 84.08 4.68z" fill="#bdbdbd"></path><ellipse transform="rotate(-45.001 10.994 116.31)" cx="10.99" cy="116.31" rx="3.56" ry="9.25" fill="#424242"></ellipse><linearGradient id="IconifyId17ecdb2904d178eab10094" gradientUnits="userSpaceOnUse" x1="20.75" y1="15.232" x2="37.146" y2="41.824" gradientTransform="rotate(21.936 59.706 136.603)"><stop offset=".285" stop-color="black"></stop><stop offset="1" stop-color="#ffffff" stop-opacity="0"></stop></linearGradient><path d="M72.52 16.93c-8.6 3.9-13.79 9.96-16.99 17.72c-1.18 2.86-2 6.05-1.13 9.02c.87 2.96 3.95 5.44 6.94 4.7c1.98-.49 3.41-2.17 4.86-3.61a27.98 27.98 0 0 1 7.66-5.36c3.54-1.68 7.42-2.59 10.9-4.41c3.47-1.82 6.66-4.88 7.12-8.77c.45-3.81-1.96-7.61-5.34-9.44c-3.38-1.83-9.06-2.1-14.02.15z" fill="url(#IconifyId17ecdb2904d178eab10094)"></path><path d="M52.24 25.22c.46-.01.88-.23 1.13-.61c1.35-1.98 4.49-7.3 13.03-12.01c4.98-2.75 9.16-3.84 10.65-4.15c4.22-.88 2.76-3.07.02-2.7c-3.11.42-16.78 3.43-26.02 17.24c-.64.97.03 2.26 1.19 2.23z" fill="#ffffff" opacity=".59"></path><path d="M117.06 61.69c-1.29.16-2.48 2.4-2.72 2.79c-1.25 2.04-3.7 7.1-12.22 11.85c-3.97 2.21-8.06 3.83-10.1 4.39c-3.33.92-2.61 3.2.1 2.7c3.09-.57 16.61-4.2 25.2-18.42c.6-1 1.46-3.52-.26-3.31z" fill="#ffffff" opacity=".59"></path><linearGradient id="IconifyId17ecdb2904d178eab10095" gradientUnits="userSpaceOnUse" x1="58.224" y1="96.402" x2="62.358" y2="53.685" gradientTransform="rotate(12.17 64.008 220.104)"><stop offset=".285" stop-color="#ffffff"></stop><stop offset="1" stop-color="#ffffff" stop-opacity="0"></stop></linearGradient><path d="M86.02 76.23c-4.53-.14-5.41-2.24-4.48-3.93c.74-1.34 2.47-1.61 4-1.73c8.15-.64 16-5.59 22.06-10.87c-1.07 5.49-3.19 8.35-6.52 11.02c-3.26 2.6-8.12 5.73-15.06 5.51z" fill="url(#IconifyId17ecdb2904d178eab10095)"></path></svg>
+        </div>
+        <p>
+            "Expert home inspections for all property types, including
+            Condos, Townhouses, Single-family homes, and Multifamily
+            dwellings”
+         </p>
+    </div>
+
+    <div class="three">
+         <div class="images">
+            <div class="img">
+                <img src="./houses/1.png" alt="">
+            </div>
+          
+            <div class="img">
+                <img src="./houses/3.png" alt="">
+            </div>
+              <div class="img">
+                <img src="./houses/2.png" alt="">
+            </div>
+            <div class="img">
+                <img src="./houses/4.png" alt="">
+            </div>
+            <div class="img">
+                <img src="./houses/5.jpg" alt="">
+            </div>
+            <div class="img">
+                <img src="./houses/6.jpg" alt="">
+            </div>
+            <div class="img">
+                <img src="./houses/7.jpg" alt="">
+            </div>
+            <div class="img">
+                <img src="./houses/8.jpg" alt="">
+            </div>
+         </div>
+    </div>
+`
+    <div class="four">
+        <h1>WERE HERE TO HELP! </h1>
+         <h2>
+            REACH OUT
+            
+            AND <br> BOOK
+           YOUR <br>
+          INSPECTION
+           TODAY!
+         </h2> 
+       
+        <div class="all">
+            <div class="right">
+                <div>
+
+                <p><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="black"><path d="M770.67-484.67q-3.34-119.66-86.5-202.83Q601-770.67 481.33-774v-66.67q73 1.34 137.17 29.84 64.17 28.5 112.33 76.66Q779-686 807.5-621.83q28.5 64.16 29.83 137.16h-66.66Zm-166 0q-3.34-50-38.34-84.66-35-34.67-85-38V-674q77.67 3.33 132.17 57.5 54.5 54.17 57.83 131.83h-66.66ZM796-120q-119 0-240-55.5T333-333Q231-435 175.5-556T120-796q0-18.86 12.57-31.43T164-840h147.33q14 0 24.34 9.83Q346-820.33 349.33-806l26.62 130.43q2.05 14.9-.62 26.24-2.66 11.33-10.82 19.48L265.67-530q24 41.67 52.5 78.5T381-381.33q35 35.66 73.67 65.5Q493.33-286 536-262.67l94.67-96.66q9.66-10.34 23.26-14.5 13.61-4.17 26.74-2.17L806-349.33q14.67 4 24.33 15.53Q840-322.27 840-308v144q0 18.86-12.57 31.43T796-120ZM233-592l76-76.67-21-104.66H187q3 41.66 13.67 86Q211.33-643 233-592Zm365.33 361.33q40.34 18.34 85.84 29.67 45.5 11.33 89.16 13.67V-288l-100-20.33-75 77.66ZM233-592Zm365.33 361.33Z"/></svg><span>Call Us: &nbsp; <a href="tel:+1 (929) 210-3781">(929) 210-3781</a></span></p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="black"><path d="M240-399.33h315.33V-466H240v66.67ZM240-526h480v-66.67H240V-526Zm0-126.67h480v-66.66H240v66.66ZM80-80v-733.33q0-27 19.83-46.84Q119.67-880 146.67-880h666.66q27 0 46.84 19.83Q880-840.33 880-813.33v506.66q0 27-19.83 46.84Q840.33-240 813.33-240H240L80-80Zm131.33-226.67h602v-506.66H146.67v575l64.66-68.34Zm-64.66 0v-506.66 506.66Z"/></svg><span>WhatsApp: &nbsp;<a href="https://api.whatsapp.com/send?phone=19292103781&text=Hi%0AI%20would%20like%20to%20book%20an%20inspection%20%0AThe%20address%20is">wa.link/5H3MG7</a></span></p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="black"><path d="M146.67-160q-27 0-46.84-19.83Q80-199.67 80-226.67v-506.66q0-27 19.83-46.84Q119.67-800 146.67-800h666.66q27 0 46.84 19.83Q880-760.33 880-733.33v506.66q0 27-19.83 46.84Q840.33-160 813.33-160H146.67ZM480-454.67 146.67-670v443.33h666.66V-670L480-454.67Zm0-66.66 330.67-212H150l330 212ZM146.67-670v-63.33V-226.67-670Z"/></svg><span>Email: &nbsp;<a href="mailto:shimon@prestigeinspectionsusa.com">Shimon@prestigeinspectionsusa.com  </a></span></p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="black"><path d="M480-80q-83.33 0-156.33-31.5-73-31.5-127.17-85.67-54.17-54.16-85.33-127.5Q80-398 80-481.33 80-565 111.17-637.5q31.16-72.5 85.33-126.67 54.17-54.16 127.17-85Q396.67-880 480-880q83.67 0 156.5 30.83 72.83 30.84 127 85Q817.67-710 848.83-637.5 880-565 880-481.33q0 83.33-31.17 156.66-31.16 73.34-85.33 127.5-54.17 54.17-127 85.67T480-80Zm0-66q32-36 54-80t36-101.33H390.67Q404-272.67 426-227.67T480-146Zm-91.33-13.33q-22.67-36.34-39.17-77.5Q333-278 322-327.33H182.67q35 64 82.83 103.33t123.17 64.67ZM572-160q66.67-21.33 119.5-64.33t85.83-103H638.67Q627-278.67 610.83-237.5 594.67-196.33 572-160ZM158-394h151.33q-3-24.67-3.83-45.5-.83-20.83-.83-41.83 0-23.67 1.16-43.17Q307-544 310-566.67H158q-6.33 22.67-8.83 41.84-2.5 19.16-2.5 43.5 0 24.33 2.5 44.5 2.5 20.16 8.83 42.83Zm219.33 0h206q3.67-27.33 4.84-46.83 1.16-19.5 1.16-40.5 0-20.34-1.16-39.17-1.17-18.83-4.84-46.17h-206q-3.66 27.34-4.83 46.17-1.17 18.83-1.17 39.17 0 21 1.17 40.5t4.83 46.83ZM650-394h152q6.33-22.67 8.83-42.83 2.5-20.17 2.5-44.5 0-24.34-2.5-43.5-2.5-19.17-8.83-41.84H650.67q3 30 4.16 48.84Q656-499 656-481.33q0 21.66-1.5 41.16-1.5 19.5-4.5 46.17Zm-12-239.33h139.33Q745.67-696 692.83-739q-52.83-43-121.5-61.67Q594-765 610.17-724.5 626.33-684 638-633.33Zm-247.33 0h180q-11.34-50-35-96-23.67-46-55.67-83.34-30 30-51 72.34-21 42.33-38.33 107Zm-208 0h140Q333-682 348.83-722.17 364.67-762.33 388-800q-68.67 18.67-120.5 61t-84.83 105.67Z"/></svg><span>WEBSITE: &nbsp;<a href="https://prestigeinspectionsusa.com">prestigeinspectionsusa.com</a></span></p>
+            </div>
+        </div>
+            <div class="left">
+                <div class="lic">
+                <h1> Licensed & Certified <br>
+                        Home Inspector </h1>
+
+                    <a   href="https://www.nycompanyregistry.com/company?utm_source=prestige-inspections-usa-inc">NY Home Inspector License # <u>16000156378</u></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  <div class="five">
+    <div>
+        <h2>"Certified Home Inspector, ICA School educated, dedicated
+to providing thorough and trustworthy inspections."</h2>
+      <p>  As a licensed and certified home inspector in New York, I provide thorough and reliable home inspection services to
+clients. With a keen eye for detail and a commitment to excellence, I'm dedicated to helping homeowners, buyers,
+and sellers make informed decisions about their properties.
+</p>
+<p>
+Whether you're purchasing a new home, selling your current one, or simply looking to maintain your property's
+value, I'm here to provide expert guidance and support. My inspections cover all major systems and components,
+ensuring you have a comprehensive understanding of your home's condition.
+</p>
+<p>
+
+With my expertise and state-of-the-art equipment, you can trust that your home inspection will be conducted with
+precision and professionalism. I'm ready to serve clients across New York, providing peace of mind and valuable
+insights that will benefit you for years to come.
+</p>
+<p>
+Reach out to us today! 
+<br>
+We're eager to assist you.
+</p>
+
+  <div class="footer">
+        <div class="r"><img src="./image.png" alt=""></div>
+        <div class="m">
+            PRESTIGE INSPECTIONS USA INC
+            <br>
+            51 forest rd unit 316-206 Monroe NY 10950
+            <br>
+            <a href="tel:9292103781">929-210-3781</a>
+            <br>
+            <a href="mailto:shimon@prestigeinspectionsusa.com">shimon@prestigeinspectionsusa.com</a>
+        </div>
+        <div class="l"><img src="./ica .png" alt="">
+        <p>INSPECTION CERTIFICATION ASSOCIATIONS</p></div>
+    </div>
+
+    </div>
+    </div>
+
+  
+<script type="text/javascript">
+   document.querySelector(".callNow button").addEventListener("mouseover", ()=>{
+       document.querySelector("svg.phone").style.display = "none";
+       document.querySelector("button > div").style.display = "block";
+       
+   })
+   document.querySelector(".callNow button").addEventListener("mouseout", ()=>{
+       document.querySelector("svg.phone").style.display = "inline";
+       document.querySelector("button > div").style.display = "none";
+
+   })
+</script>
+       
+    
+</body>
+</html>
