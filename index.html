@@ -102,7 +102,7 @@
             transform: translate(5%, -50%);
             width: 25%;
             border-radius: 50%;
-            animation: fadeIn 5s, goLeft 5s;
+            /* animation: fadeIn 5s, goLeft 5s; */
         }
 
         .description{
@@ -493,6 +493,40 @@
         .footer a{
             text-decoration: none;
             color: black;
+        }
+
+        @media (max-width: 500px){
+
+        .logoCon{
+            background-image: url(./240_F_320343159_DiMoa3cJB2UIpvHA7IomP6hhARJWESRI.jpg);
+            background-size: cover;
+            height: 150vh;
+            width: 100vh;
+        }
+
+        .logo img{
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%);
+            width: 35%;
+            border-radius: 50%;
+            /* animation: fadeIn 5s, goLeft 5s; */
+        }
+
+        .description{
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%);
+            color: black;
+            text-shadow: 0 0.19em 0.31em #adaea9; /* 0 3px 5px */
+            font-family: "DM Serif Display", serif;
+            text-align: center;
+            width: 100%;
+            /* animation: fadeIn 6s; */
+        }
+
         }
     </style>
 </head>
