@@ -4,9 +4,9 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&family=Fredericka+the+Great&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&family=Fredericka+the+Great&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <title>Document</title>
 
     <style>
@@ -69,7 +69,6 @@
         h1{
             font-size: 3.75rem;
         }
-
 
         p{
             font-family: "Cormorant", serif;
@@ -222,6 +221,102 @@
             text-shadow: 0 0.19em 0.31em #adaea9;
         }
 
+        .reviews{
+            background: linear-gradient(to bottom, white 0%, rgba(200, 200, 177, 0.7) 50%, white 100%);
+            position: relative;
+            padding: 30px;
+            text-align: center;
+            width: 100%;
+            justify-self: center;
+            height: 130vh;
+           
+           
+        }
+
+        .reviews > div{
+              overflow: scroll;
+              scrollbar-width: none;
+              padding: 10px;
+              width: 90%;
+              justify-self: center;
+        }
+
+        .reviews h1{
+            font-family: "Cormorant", serif;
+            padding: 50px;
+            padding-bottom: 200px;
+        }
+
+        .reviews h3{
+            font-size: 1.5625rem; /* 25px */
+            width: 70%;
+            justify-self: center;
+        }
+
+        .reviews p{
+            font-size: 1.0625rem; /* 17px */
+            font-family: "Caveat", cursive;
+        }
+
+        .reviews .divs{
+            color: white;
+            display: flex;
+            gap: 1.6em;
+            padding: 10px;
+           
+            transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+            will-change: transform;
+            width: 100%;
+            font-family: "Caveat", cursive;
+           
+        }
+
+        .divs > div > div{
+            background-color: rgba(40, 39, 39, 0.8);
+            backdrop-filter: blur(4px);
+            width: 100%;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .reviews .divs > div{
+           background-image: url(./240_F_320343159_DiMoa3cJB2UIpvHA7IomP6hhARJWESRI.jpg);
+           background-size: cover;
+            min-width: 30%;
+            max-width: 32%;
+            flex: 0 0 32%;
+            border: none;
+           /* box-shadow: inset 12px 1px 3px #323232, 1px -1px 10px #9e9e9e,2px 1px 20px #3a3939 ; */
+           border-radius: 20px;
+        }
+
+      
+
+        .reviews .movel{
+            color: black;
+            font-size: 2.5rem; /* 40px */
+            position: absolute;
+            left:2.5rem;
+            top: 28.125rem; /* 450px */
+        }
+
+        .reviews .moveR{
+            color: black;
+            font-size: 2.5rem; /* 40px */
+            position: absolute;
+            right: 2.5rem;
+            top: 28.125rem; /* 450px */
+        }
+
+        .reviews .moveR:hover,.reviews .movel:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        .divs img{
+            width: 40%;
+        }
+
         .three{
             height: 100vh;
             width: 100%;
@@ -358,12 +453,12 @@
         }
 
         .footer{
-            margin-top: 200px;
+            margin-top: 12.5rem; /* 200px */
             text-align: center;
             display: grid ;
             grid-template-columns: 1fr 1fr 1fr;
             font-size: 1.25rem;
-            line-height: 30px;
+            line-height: 1.875rem; /* 30px */
         }
 
         .footer .m{
@@ -386,8 +481,8 @@
         .footer .l p{
             color: #386dbd;
             font-size: 0.875rem;
-            margin: 0px;
-            padding: 0px;
+            margin: 0;
+            padding: 0;
         }
 
          .footer .l img{
@@ -448,9 +543,117 @@
          </p>
     </div>
 
+    <hr>
+      <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="reviews">
+        <h1>"What Our Clients Say"</h1>
+        <span class="moveR">&#10095</span>
+        <span class="movel">&#10094</span>
+
+        <div class="">
+        <div class="divs">
+           <div class="div">
+                <div >
+                    <h3><i> "1 Its Not Just The Service Its The Whole Heart "</i>
+                    </h3>
+                    <br>
+                    <p>- John Doe</p>
+                    <br>
+                    <img src="./5star.png" alt="">
+
+                </div>
+            </div>
+           <div class="div">
+                <div >
+                    <h3><i> "1 Its Not Just The Service Its The Whole Heart "</i>
+                    </h3>
+                    <br>
+                    <p>- John Doe</p>
+                    <br>
+                    <img src="./5star.png" alt="">
+
+                </div>
+            </div>
+             <div class="div">
+                <div >
+                    <h3><i> "1 Its Not Just The Service Its The Whole Heart "</i>
+                    </h3>
+                    <br>
+                    <p>- John Doe</p>
+                    <br>
+                    <img src="./5star.png" alt="">
+
+                </div>
+            </div>
+           <div class="div">
+                <div >
+                    <h3><i> "1 Its Not Just The Service Its The Whole Heart "</i>
+                    </h3>
+                    <br>
+                    <p>- John Doe</p>
+                    <br>
+                    <img src="./Untitled.png" alt="">
+
+                </div>
+            </div>
+                <div class="div">
+                <div >
+                    <h3><i> "1 Its Not Just The Service Its The Whole Heart "</i>
+                    </h3>
+                    <br>
+                    <p>- John Doe</p>
+                    <br>
+                    <img src="./5star.png" alt="">
+
+                </div>
+            </div>
+           <div class="div">
+                <div >
+                    <h3><i> "1 Its Not Just The Service Its The Whole Heart "</i>
+                    </h3>
+                    <br>
+                    <p>- John Doe</p>
+                    <br>
+                    <img src="./5star.png" alt="">
+
+                </div>
+            </div>
+             <div class="div">
+                <div >
+                    <h3><i> "1 Its Not Just The Service Its The Whole Heart "</i>
+                    </h3>
+                    <br>
+                    <p>- John Doe</p>
+                    <br>
+                    <img src="./5star.png" alt="">
+
+                </div>
+            </div>
+           <div class="div">
+                <div >
+                    <h3><i> "1 Its Not Just The Service Its The Whole Heart "</i>
+                    </h3>
+                    <br>
+                    <p>- John Doe</p>
+                    <br>
+                    <img src="./5star.png" alt="">
+
+                </div>
+            </div>
+        </div>
+        </div>
+             
+    </div>
+
+    <hr> 
+
     <div class="three">
         <div class="images">
-            <img src="./Untitled.png" alt="">
+            <img src="./dis[layH.png" alt="">
         </div>
     </div>
 `
@@ -540,6 +743,39 @@ We're eager to assist you.
        document.querySelector("button > div").style.display = "none";
 
    })
+   const reviewsDivs = document.querySelector('.reviews .divs');
+const reviewCards = document.querySelectorAll('.reviews .divs > div');
+const nextBtn = document.querySelector('.moveR');
+const prevBtn = document.querySelector('.movel');
+let currentIndex = 0;
+const visibleCount = 3;
+
+function updateSlider() {
+  const offset = currentIndex * (100 / visibleCount);
+  reviewsDivs.style.transform = `translateX(-${offset}%)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  if (currentIndex < reviewCards.length - visibleCount) {
+    currentIndex++;
+  } else {
+    currentIndex = 0;
+  }
+  updateSlider();
+});
+
+prevBtn.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = reviewCards.length - visibleCount;
+    if (currentIndex < 0) currentIndex = 0;
+  }
+  updateSlider();
+});
+
+// Set initial position
+updateSlider();
 </script>
        
     
