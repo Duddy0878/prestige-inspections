@@ -164,15 +164,15 @@ html, body {
             display: flex; 
             align-items: center; 
             justify-content: center; 
-            gap: 0.5em; /* 8px -> 0.5em */
-            font-size: 1.25rem; /* 20px -> 1.25rem */
-            padding: 3.0rem; /* 50px -> 3.125rem */
+            gap: 0.5em; 
+            font-size: 1.25rem; 
+            padding: 3.0rem; 
         }
 
         .afterLogo{
             width: 100%;
             position: absolute;
-            bottom: 9.375rem; /* 150px -> 9.375rem */
+            bottom: 9.375rem; 
             left: 50%;
             transform: translate(-50%, 0px);
             color: black;
@@ -209,7 +209,7 @@ html, body {
 
         .two{
             height: 110vh;
-            padding: 1.875rem; /* 30px -> 1.875rem */
+            padding: 1.875rem; 
             background: linear-gradient(to bottom, white 0%, rgba(240, 223, 223, 0.7) 50%, white 100%);
         }
 
@@ -509,21 +509,13 @@ html, body {
         }
 
 @media (max-width: 700px){
-         html{
-                font-size: 9px;
-            }
+        html{
+            font-size: 9px;
+        }
+
         .logoCon{
-            background-image: url(./240_F_320343159_DiMoa3cJB2UIpvHA7IomP6hhARJWESRI.jpg);
-            background-size: cover;
             height: 100vh;
             width: 100vw;
-            position: relative;
-            left: 50%;
-            right: 50%;
-            margin-left: -50vw;
-            margin-right: -50vw;
-            max-width: 100vw;
-            overflow-x: hidden;
         }
 
         .logo img{
@@ -532,58 +524,58 @@ html, body {
             left: 50%;
             transform: translate(-50%);
             width: 25%;
-            border-radius: 50%;
             animation: fadeIn 5s;
         }
 
         .description{
             position: absolute;
-            top: 30%;
             left: 50%;
             transform: translate(-50%);
-            color: black;
-            text-shadow: 0 0.19em 0.31em #adaea9; /* 0 3px 5px */
-            font-family: "DM Serif Display", serif;
-            text-align: center;
             width: 100%;
-            animation: fadeIn 6s;
         }
 
           .weServe{
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            gap: 0.5em; /* 8px -> 0.5em */
-            font-size: 1.35rem; /* 20px -> 1.25rem */
+            font-size: 1.35rem; 
             padding-bottom: 0rem;
-            padding: 2.0rem; /* 50px -> 3.125rem */
+            padding: 2.0rem; 
         }
             .afterLogo{
-            width: 100%;
-            position: absolute;
-            bottom: 10px; /* 150px -> 9.375rem */
-            left: 50%;
+            bottom: 10px; 
             transform: translate(-50%);
-            color: black;
-            text-shadow:
-                0.01em 0.01em 0 #bdbdbd,
-                0.45em 0.25em 4px #9e9e9e;
-            font-family: "DM Serif Display", serif;
-            text-align: center;
             font-size: 2.125rem;
-            animation: fadeIn 6s;
+        }
+
+        .two{
+            height: 70vh;
+            background: linear-gradient(to bottom, white 0%, rgba(231, 231, 231, 0.7) 50%, white 100%);
+        }
+
+        .underOur{
+            gap: 0.2em; 
+            font-size: 3.0rem;
+        }
+
+        .underOur svg{
+            width: 40px;
+            height: 40px;
         }
  
     }
         
-        @media(max-width: 400px){
+        @media(max-width: 450px){
              html{
-                font-size: 7px;
+                font-size: 8px;
             }
 
-         .description p{
-            margin-top: 60px;
-        }
+            .description p{
+                margin-top: 60px;
+            }
+
+            .weServe{
+                font-size: 1.0rem; 
+                padding-bottom: 0rem;
+                padding: 2.0rem; 
+            }
         }
     </style>
 </head>
