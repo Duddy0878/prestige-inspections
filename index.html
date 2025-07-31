@@ -526,7 +526,7 @@ html, body {
             top: 5%;
             left: 50%;
             transform: translate(-50%);
-            width: 35%;
+            width: 25%;
             border-radius: 50%;
             animation: fadeIn 5s;
         }
@@ -544,32 +544,21 @@ html, body {
             animation: fadeIn 6s;
         }
 
-        }
-        
-        @media(max-width: 400px){
-             html{
-                font-size: 7px;
-            }
-
-        .weServe{
+          .weServe{
             display: flex; 
             align-items: center; 
             justify-content: center; 
             gap: 0.5em; /* 8px -> 0.5em */
-            font-size: 1.0rem; /* 20px -> 1.25rem */
+            font-size: 1.45rem; /* 20px -> 1.25rem */
+            padding-bottom: 0rem;
             padding: 2.0rem; /* 50px -> 3.125rem */
         }
-
-         .description p{
-            margin-top: 60px;
-        }
-
-         .afterLogo{
+            .afterLogo{
             width: 100%;
             position: absolute;
-            bottom: 9.375rem; /* 150px -> 9.375rem */
+            bottom: 10px; /* 150px -> 9.375rem */
             left: 50%;
-            transform: translate(-50%, 0px);
+            transform: translate(-50%);
             color: black;
             text-shadow:
                 0.01em 0.01em 0 #bdbdbd,
@@ -578,6 +567,17 @@ html, body {
             text-align: center;
             font-size: 2.125rem;
             animation: fadeIn 6s;
+        }
+ 
+    }
+        
+        @media(max-width: 400px){
+             html{
+                font-size: 7px;
+            }
+
+         .description p{
+            margin-top: 60px;
         }
         }
     </style>
