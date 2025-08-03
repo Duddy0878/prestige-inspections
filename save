@@ -1,0 +1,4 @@
+http://192.168.1.143:5500
+
+npm install --global http-server
+ http-server
