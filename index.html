@@ -277,7 +277,7 @@ html, body {
         .reviews .divs{
             color: white;
             display: flex;
-            gap: 1.6em;
+            gap: 1.6rem;
             padding: 10px;
            
             transition: transform 0.5s cubic-bezier(.77,0,.18,1);
@@ -682,6 +682,12 @@ html, body {
                 width: 20px;
                 height: 20px;
             }
+
+             .reviews .divs > div{
+                min-width: 50%;
+                max-width:50%;
+                flex: 0 0 50%;
+             }
         }
     </style>
 </head>
@@ -937,14 +943,18 @@ const reviewCards = document.querySelectorAll('.reviews .divs > div');
 const nextBtn = document.querySelector('.moveR');
 const prevBtn = document.querySelector('.movel');
 let currentIndex = 0;
-const visibleCount = 3;
+function getVisibleCount() {
+  return window.innerWidth <= 700 ? 2 : 3;
+}
 
 function updateSlider() {
-  const offset = currentIndex * (100 / visibleCount);
+  const visibleCount = getVisibleCount();
+  const offset = currentIndex * (101 / visibleCount);
   reviewsDivs.style.transform = `translateX(-${offset}%)`;
 }
 
 nextBtn.addEventListener('click', () => {
+  const visibleCount = getVisibleCount();
   if (currentIndex < reviewCards.length - visibleCount) {
     currentIndex++;
   } else {
@@ -954,6 +964,7 @@ nextBtn.addEventListener('click', () => {
 });
 
 prevBtn.addEventListener('click', () => {
+  const visibleCount = getVisibleCount();
   if (currentIndex > 0) {
     currentIndex--;
   } else {
