@@ -542,25 +542,51 @@
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
-      .hero-split, .about-split, .why-split, .quote-split { grid-template-columns: 1fr; }
+      .hero-split, .about-split, .why-split, .quote-split {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
       .hero-right, .why-right { height: 300px; }
       .about-img { height: 300px; }
-      .hero-left, .about-right, .why-left, .quote-left, .quote-right { padding: 60px 30px; }
+      .hero-left, .about-right, .why-left, .quote-left, .quote-right { padding: 60px 40px; }
       .process-steps { grid-template-columns: 1fr 1fr; }
       .process-steps::before { display: none; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 640px) {
-      nav { padding: 0 20px; }
-      nav img { height: 52px; width: 52px; }
+      nav { padding: 0 16px; height: 70px; }
+      nav img { height: 48px; width: 48px; }
       .nav-links { display: none; }
-      .nav-quote { display: inline-block !important; }
-      .services-section, .process-section, .areas-section { padding: 60px 20px; }
+      .nav-quote { padding: 8px 14px; font-size: 0.72rem; letter-spacing: 1px; }
+
+      .hero-left { padding: 36px 20px; }
+      .hero-right { height: 220px; }
+
+      .stat { min-width: 140px; }
+
+      .about-img { height: 220px; }
+      .about-right { padding: 36px 20px; }
+
+      .services-section { padding: 50px 20px; }
+
+      .why-left { padding: 36px 20px; }
+      .why-right { height: 220px; }
+
+      .process-section { padding: 50px 20px; }
       .process-steps { grid-template-columns: 1fr; }
+
+      .areas-section { padding: 50px 20px; }
+      .areas-grid { grid-template-columns: 1fr 1fr; }
+
+      .quote-left { padding: 36px 20px; }
+      .quote-right { padding: 32px 20px; }
+
       .form-row { grid-template-columns: 1fr; }
       .addon-grid { grid-template-columns: 1fr; }
+
+      footer { padding: 36px 20px 20px; }
       .footer-grid { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
     }
   </style>
 </head>
