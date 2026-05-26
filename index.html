@@ -821,8 +821,6 @@
     }
     .about-value p { font-size: 13px; color: var(--mid-gray); line-height: 1.6; }
 
-    .svg-defs { display: none; }
-
     /* ─── UTILITY CLASSES (replacing inline styles) ─── */
     .btn-mt { margin-top: 20px; }
     .radon-svg { position: relative; z-index: 1; }
@@ -873,34 +871,6 @@
 </head>
 <body>
 
-  <!-- ── LOGO SVG SYMBOL (reused throughout) ── -->
-  <svg xmlns="http://www.w3.org/2000/svg" class="svg-defs">
-    <symbol id="prestige-logo" viewBox="0 0 200 200">
-      <!-- outer decorative arcs -->
-      <path d="M 100 8 A 92 92 0 0 1 192 100" fill="none" stroke="#1F2937" stroke-width="3" stroke-linecap="round"/>
-      <path d="M 100 192 A 92 92 0 0 1 8 100" fill="none" stroke="#1F2937" stroke-width="3" stroke-linecap="round"/>
-      <!-- inner circle ring (light) -->
-      <circle cx="100" cy="100" r="80" fill="none" stroke="#1F2937" stroke-width="1" stroke-dasharray="4 6" stroke-dashoffset="0" opacity="0.15"/>
-      <!-- house shape -->
-      <polygon points="100,30 140,58 140,90 60,90 60,58" fill="none" stroke="#1F2937" stroke-width="4.5" stroke-linejoin="round"/>
-      <!-- chimney -->
-      <rect x="122" y="30" width="9" height="18" fill="none" stroke="#1F2937" stroke-width="3.5"/>
-      <!-- door gap in house (P letter body) -->
-      <rect x="82" y="64" width="22" height="26" fill="#1F2937" rx="2"/>
-      <!-- P letter serif bar top -->
-      <rect x="82" y="60" width="30" height="5" fill="#1F2937" rx="2"/>
-      <!-- P letter bump -->
-      <path d="M112,60 Q130,60 130,72 Q130,84 112,84" fill="none" stroke="#1F2937" stroke-width="4.5" stroke-linecap="round"/>
-      <!-- company name -->
-      <text x="100" y="117" font-family="'Poppins',sans-serif" font-weight="700" font-size="16" fill="#1F2937" text-anchor="middle" letter-spacing="5">PRESTIGE</text>
-      <text x="100" y="133" font-family="'Poppins',sans-serif" font-weight="400" font-size="8.5" fill="#1F2937" text-anchor="middle" letter-spacing="3">INSPECTION SERVICES</text>
-      <!-- thin rule -->
-      <line x1="52" y1="140" x2="148" y2="140" stroke="#1F2937" stroke-width="0.8" opacity="0.4"/>
-      <!-- tagline -->
-      <text x="100" y="154" font-family="'Open Sans',sans-serif" font-size="6.5" fill="#1F2937" text-anchor="middle" letter-spacing="2" opacity="0.6">CONFIDENCE IN EVERY CORNER</text>
-    </symbol>
-  </svg>
-
   <!-- ── TOP BAR ── -->
   <div class="top-bar">
     <div class="container">
@@ -921,9 +891,7 @@
   <header class="main-header">
     <div class="container">
       <div class="logo-area">
-        <svg class="logo-icon" role="img" aria-label="Prestige Inspections USA logo">
-          <use href="#prestige-logo"/>
-        </svg>
+        <img class="logo-icon" src="image (1).png" alt="Prestige Inspections USA" />
       </div>
 
       <nav>
@@ -1396,9 +1364,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="logo-area">
-            <svg class="logo-icon-footer" role="img" aria-label="Prestige Inspections USA logo">
-              <use href="#prestige-logo"/>
-            </svg>
+            <img class="logo-icon-footer" src="image (1).png" alt="Prestige Inspections USA" />
           </div>
           <p>Professional home inspections, sewer scope inspections, and radon testing throughout New York and the Tri-State Area.</p>
         </div>
